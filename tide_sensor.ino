@@ -23,7 +23,6 @@ void setup() {
 
   // Wait for serial to initialize.
   while(!Serial) { 
-    //Serial.println("Waiting for Serial.");
     delay(500);
   }
   while (WiFi.status() != WL_CONNECTED) {
@@ -36,7 +35,7 @@ void loop() {
   new_distance = get_distance();
   send_to_ifttt(new_distance);
 
-  delay(300000); // Wait for serial communication to initialize
+  delay(300000); // Wait for 5 minutes
 }
 
 void send_to_ifttt(int distance) {
@@ -59,8 +58,6 @@ void send_to_ifttt(int distance) {
 
     // Send POST request and check the response
     int httpCode = http.POST(payload);
-    // Uncomment for debugging purpose
-    //String response = http.getString();
     http.end();
 }
 
