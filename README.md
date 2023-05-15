@@ -42,3 +42,4 @@ What's needed for this project:
 - [Epoxy Solar Panel](https://www.amazon.com/dp/B0736W4HK1?psc=1&amp;ref=ppx_yo2ov_dt_b_product_details&_encoding=UTF8&tag=skalache-20&linkCode=ur2&linkId=1b6a063d330a6bee1932e44322e985bc&camp=1789&creative=9325)
  - [3000mAh Lipo Battery](https://www.amazon.com/dp/B09FL7QD88?psc=1&amp;ref=ppx_yo2ov_dt_b_product_details&_encoding=UTF8&tag=skalache-20&linkCode=ur2&linkId=e7640aea0cdd5f3e846f88d6d76a85e0&camp=1789&creative=9325)
  - [Dustproof Waterproof IP65 Electrical Boxes](%22https://www.amazon.com/dp/B0736W4HK1?psc=1&amp;ref=ppx_yo2ov_dt_b_product_details&_encoding=UTF8&tag=skalache-20&linkCode=ur2&linkId=1b6a063d330a6bee1932e44322e985bc&camp=1789&creative=9325)
+ 
