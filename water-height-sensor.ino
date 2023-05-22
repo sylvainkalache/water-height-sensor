@@ -1,15 +1,8 @@
 #include <ArduinoJson.h> // Benoit Blanchon
+#include "credentials.h" // Replace with your values
 #include <ESP8266HTTPClient.h> // Arduino
 #include <ESP8266WiFi.h> // Arduino
 #include <HCSR04.h> // Martin Sosic
-
-// Set WiFi credentials
-#define WIFI_SSID "REPLACE_VALUE"
-#define WIFI_PASS "REPLACE_VALUE"
-
-// Tide system credentials
-const char* iftttApiKey = "REPLACE_VALUE";
-const char* eventName = "REPLACE_VALUE";
 
 UltraSonicDistanceSensor distanceSensor(D1, D2);
 
@@ -45,7 +38,7 @@ void send_to_ifttt(int distance) {
     WiFiClient client;
     HTTPClient http;
 
-    String url = "http://maker.ifttt.com/trigger/" + String(eventName) + "/with/key/" + String(iftttApiKey);
+    String url = "http://maker.ifttt.com/trigger/" + String(IFTTT_EVENT_NAME) + "/with/key/" + String(IFTTT_API_KEY);
     http.begin(client, url);
 
     // Prepare JSON payload
