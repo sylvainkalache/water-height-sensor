@@ -22,15 +22,18 @@ void setup() {
   WiFi.setAutoConnect(true);
 
   // Wait for serial to initialize.
-  while(!Serial) { 
-    delay(500);
+  while(!Serial) {
+    Serial.println("Waiting for Serial");
+    delay(5000);
   }
   while (WiFi.status() != WL_CONNECTED) {
+    Serial.println("Waiting for Wifi");
     delay(5000);
   }
 }
 
 void loop() {
+  Serial.println("In the loop");
   int new_distance;
   new_distance = get_distance();
   send_to_ifttt(new_distance);
@@ -59,6 +62,8 @@ void send_to_ifttt(int distance) {
     // Send POST request and check the response
     int httpCode = http.POST(payload);
     http.end();
+    Serial.println("Sent value to IFTTT");
+
 }
 
 int get_distance() {
@@ -81,6 +86,7 @@ int get_distance() {
     if ((distance1 != 0) && abs(distance1 - distance2) <= 1 && abs(distance1 - distance3) <= 1 && abs(distance1 - distance4) <= 1 && abs(distance1 - distance5) <= 1 && abs(distance2 - distance3) <= 1 && abs(distance2 - distance4) <= 1 && abs(distance2 - distance5) <= 1 && abs(distance3 - distance4) <= 1 && abs(distance3 - distance5) <= 1 && abs(distance4 - distance5) <= 1) {
         return distance1;
         break; // Exit the while loop
+        Serial.println("Measurements don't match");
     }
   }
 }
