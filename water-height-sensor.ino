@@ -35,7 +35,7 @@ void loop() {
   new_distance = get_distance();
   send_to_ifttt(new_distance);
 
-  delay(300000); // Wait for 5 minutes
+  ESP.deepSleep(300e6);
 }
 
 void send_to_ifttt(int distance) {
