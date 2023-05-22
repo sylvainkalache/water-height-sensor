@@ -14,6 +14,9 @@ The code is well document but in a nutshell. The board connects to the wifi and 
 ## Wiring schema
 ![enter image description here](https://github.com/sylvainkalache/water-height-sensor/blob/main/water-height-sensor.png?raw=true)
 Make sure to use D1 and D2. I tried using other ports to connect to the JSN-SR04T and it would not work.
+
+For the instruction `ESP.deepSleep(300e6);` to work – which puts the board in deep sleep for 5 minutes - you must connect D0 with the Reset pin.
+
 Note: the ESP board on the schema isn't an exact reproduction pin-wise
 
 ## Box setup
